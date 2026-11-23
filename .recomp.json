@@ -1,0 +1,13 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "Discworld II - Mortality Bytes!",
+  "system": "PS1",
+  "type": "recomp",
+  "toolchain": "psxrecomp",
+  "status": "exploring",
+  "project": "discworld-ii-mortality-bytes-recomp",
+  "original": {
+    "region": "USA",
+    "serial": "SCUS-94605"
+  }
+}

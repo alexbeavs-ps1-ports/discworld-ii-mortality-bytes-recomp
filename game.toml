@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Discworld II - Mortality Bytes!"
+id = "SCUS-94605"
+players = 1
+exe = "disc/SCUS_946.05"
+disc = "disc/Discworld II - Mortality Bytes! (USA).cue"
+discs = ["disc/Discworld II - Mortality Bytes! (USA).cue"]
+disc_serials = ["SCUS-94605"]
+load_address = "0x80010000"
+entry_pc = "0x80047914"
+text_size = "0x0005C800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Discworld II - Mortality Bytes! (USA) (Track 1).bin"
+cue_name = "Discworld II - Mortality Bytes! (USA).cue"
+boot_exe = "SCUS_946.05"
+known_sizes = [695493456]
+known_md5 = [
+  "ff64463860dda97ea8d2795a5dd8e168",
+]
+known_sha1 = [
+  "b6b164ac03337c0395f88efbfefb9fd8b071d99a",
+]
+known_crc32 = [
+  "be526682",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH1001.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Discworld II - Mortality Bytes! Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 2
+required_disc_fp = "0d77bac5408f843c3e7cd445a4d5498d16e79ae7a7850ef4e4a3e2c5286e462c"
